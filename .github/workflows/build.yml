@@ -15,8 +15,8 @@ jobs:
         with:
           gradle-version: 9.2.1
       - run: gradle build --no-daemon
+        working-directory: motions-client
       - uses: actions/upload-artifact@v4
         with:
           name: motions-client-jar
-          path: build/libs/motions-client-1.0.0.jar
-        
+          path: motions-client/build/libs/motions-client-1.0.0.jar
